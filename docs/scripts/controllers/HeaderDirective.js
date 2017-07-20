@@ -5,8 +5,12 @@
         .directive('pageHeader', HeaderDirective);
 
     function HeaderDirective() {
+        var urladd = '';
+        if (window.location.href.indexOf('github.io') !== -1)
+            urladd = '/validmate';
+
         return {
-            templateUrl: '/validmate/views/common/header.html',
+            templateUrl: urladd+'/views/common/header.html',
             restrict: 'E',
             controller: ['$scope', '$location', function ($scope, $location) {
                 $scope.nav = [

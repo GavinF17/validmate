@@ -5,13 +5,17 @@
         .config(['$routeProvider', config]);
 
     function config($routeProvider) {
+        var urladd = '';
+        if (window.location.href.indexOf('github.io') !== -1)
+            urladd = '/validmate'
+
         $routeProvider
             .when('/', {
-                templateUrl: '/validmate/views/pages/home.html',
+                templateUrl: urladd+'/views/pages/home.html',
                 controller: 'ValidmateController'
             })
             .when('/about', {
-                templateUrl: '/validmate/views/pages/about.html',
+                templateUrl: urladd+'/views/pages/about.html',
                 controller: 'ValidmateController'
             })
 
