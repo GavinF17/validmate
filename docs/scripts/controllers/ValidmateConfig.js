@@ -14,6 +14,8 @@
                 templateUrl: '/validmate/views/pages/about.html',
                 controller: 'ValidmateController'
             })
+
+
             .otherwise('/');
     }
 })();
