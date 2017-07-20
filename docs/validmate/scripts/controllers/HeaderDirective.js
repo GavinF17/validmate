@@ -6,7 +6,7 @@
 
     function HeaderDirective() {
         return {
-            templateUrl: '/views/common/header.html',
+            templateUrl: '/validmate/views/common/header.html',
             restrict: 'E',
             controller: ['$scope', '$location', function ($scope, $location) {
                 $scope.nav = [
